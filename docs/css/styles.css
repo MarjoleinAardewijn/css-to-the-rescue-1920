@@ -3,6 +3,7 @@
   --light: #F5F5F5;
   --blue: #2ba1e0;
   --dark-blue: #3D6A80;
+  --box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,9 +38,9 @@ main {
   background: url("../img/4886.jpg") center no-repeat;
   background-size: cover;
 
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: var(--box-shadow);
+  -moz-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
 
   color: var(--blue);
   height: 100vh;
@@ -51,6 +52,7 @@ main {
 
 .header > p {
   font-size: 1.5em;
+  color: var(--light);
 }
 
 h1 {
@@ -92,9 +94,9 @@ blockquote {
   justify-content: space-between;
   flex: 0 1 46%;
 
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: var(--box-shadow);
+  -moz-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
 
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
