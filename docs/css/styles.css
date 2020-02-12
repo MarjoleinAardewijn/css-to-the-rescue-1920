@@ -1,4 +1,10 @@
 :root {
+  --blob: #B6C61A;
+  /*--font-dark: #333;*/
+  /*--font-light: #F5F5F5;*/
+  --background: #343434;
+  --shades: 0 0 5px 0 rgba(0, 0, 0, 0.16);
+
   --dark: #333;
   --light: #F5F5F5;
   --blue: #2ba1e0;
@@ -10,92 +16,97 @@
   --box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--dark);
-    color: var(--light);
-  }
-
-  .section-header > span {
-    color: var(--light-blue);
-  }
-
-  .card {
-    background-color: var(--card-dark);
-  }
-
-  .card > .dish > p {
-    color: var(--lightgray);
-  }
-
-  .card > .price {
-    color: var(--light-blue);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: var(--light);
-    color: var(--dark);
-  }
-
-  .section-header > span {
-    color: var(--dark-blue);
-  }
-
-  .card {
-    background-color: var(--card-light);
-  }
-
-  .card > .price {
-    color: var(--dark-blue);
-  }
-}
-
-* {
-  margin:0;
-}
-
 body {
+  margin: 0;
   font-family: Roboto, sans-serif;
-  font-size: 16px;
-  line-height: 1.4;
-}
-
-main {
-  max-width: 800px;
-  margin: 10vh auto;
-}
-.header {
-  background: url("../img/4886.jpg") center no-repeat;
-  background-size: cover;
-
-  -webkit-box-shadow: var(--box-shadow);
-  -moz-box-shadow: var(--box-shadow);
-  box-shadow: var(--box-shadow);
-
-  color: var(--blue);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.header > p {
-  font-size: 1.5em;
-  color: var(--light);
+  position: relative;
 }
 
 h1 {
   font-size: 6em;
 }
+
 h2 {
   font-size: 2em;
   color: var(--blue);
+  margin-bottom: 0;
 }
 
-.section-header {
+/*inspiration: https://css-tricks.com/the-checkbox-hack/*/
+nav {
+  display: flex;
+  justify-content: flex-end;
+
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+
+nav > div {
+  margin: 1rem;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+nav > label {
+  cursor: pointer;
+}
+
+nav > div > section > div {
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease;
+}
+
+input[type="checkbox"]:checked ~ label ~ section > div {
+  max-height: 100vh;
+}
+
+/*inspiration: https://codepen.io/Ninaiskel/pen/MWWgMwL < blob*/
+/*inspiration: https://dev.to/equinusocio/making-a-css-blob-37nb < border-radius*/
+/*inspiration: http://jsfiddle.net/1fevoyze/ < div as background*/
+section > div[data-bind='background--blob'] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background: var(--blob);
+  box-shadow: var(--shades);
+
+  animation: blob 8s ease-in-out infinite;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  transition: all 1s;
+
+  height: 80vh;
+  width: 80vw;
+
+  position: absolute;
+  top: 10vh;
+  left: 10vw;
+
+  z-index: 1000;
+}
+
+@keyframes blob {
+  0% {
+    border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+/*end inspiration links*/
+
+div header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,18 +120,23 @@ blockquote {
   margin: 1.5rem 0;
 }
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+section > div[data-bind='background--blob'] > div {
+  display: block;
   margin: 1.5rem 0;
+
+  width: 50%;
+  height: 50%;
+  overflow-y: scroll;
 }
 
-.card {
+section > div[data-bind='background--blob'] > div > article {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  flex: 0 1 46%;
+
+  background-color: var(--card-light);
+
+  min-width: 350px;
 
   -webkit-box-shadow: var(--box-shadow);
   -moz-box-shadow: var(--box-shadow);
@@ -134,11 +150,20 @@ blockquote {
   padding: 0.5rem;
 }
 
-.card > .dish {
+div[data-bind='dish'] {
   flex: 10;
 }
 
-.card > .price {
+div[data-bind='dish'] h3 {
+  margin: 0;
+}
+
+div[data-bind='dish'] p {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+div[data-bind='price'] {
   flex: 1;
 
   display: flex;
@@ -148,10 +173,44 @@ blockquote {
   font-weight: bold;
 }
 
-.card > .price:before {
+div[data-bind='price']:before {
   content: '€';
 }
 
-.card > .price:after {
+div[data-bind='price']:after {
   content: ',-';
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  z-index: 998;
+}
+
+header[data-bind='header'] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /*background: url("../img/4886.jpg") center no-repeat;*/
+  /*background-size: cover;*/
+
+  background: var(--light);
+
+  -webkit-box-shadow: var(--shades);
+  -moz-box-shadow: var(--shades);
+  box-shadow: var(--shades);
+
+  color: var(--dark);
+
+  height: 100vh;
+  width: 100vw;
+}
+
+header[data-bind='header'] > p {
+  font-size: 1.5em;
+  color: var(--dark);
 }
