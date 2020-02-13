@@ -1,18 +1,19 @@
 :root {
-  --blob: #B6C61A;
+  --blob: hsl(66, 77%, 44%);
   /*--font-dark: #333;*/
   /*--font-light: #F5F5F5;*/
-  --background: #343434;
+  --background: hsl(0, 0%, 20%);
   --shades: 0 0 5px 0 rgba(0, 0, 0, 0.16);
 
-  --dark: #333;
-  --light: #F5F5F5;
-  --blue: #2ba1e0;
-  --dark-blue: #3D6A80;
-  --light-blue: #9ed8f7;
-  --lightgray: #B1B1B1;
-  --card-dark: #262626;
-  --card-light: #EDEDED;
+  --dark: hsl(0, 0%, 20%);
+  --light: hsl(0, 0%, 96%);
+  --blue: hsl(201, 74%, 52%);
+  --dark-blue: hsl(200, 35%, 37%);
+  --light-blue: hsl(201, 85%, 79%);
+  --lightgray: hsl(0, 0%, 69%);
+  --card-dark: hsl(0, 0%, 15%);
+  --card-light: hsl(0, 0%, 93%);
+  --nav: hsla(0, 0%, 20%, 0.5);
   --box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -34,8 +35,13 @@ h2 {
 
 /*inspiration: https://css-tricks.com/the-checkbox-hack/*/
 nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   justify-content: flex-end;
+
+  background: var(--nav);
 
   position: fixed;
   width: 100vw;
@@ -69,6 +75,9 @@ input[type="checkbox"]:checked ~ label ~ section > div {
 /*inspiration: https://dev.to/equinusocio/making-a-css-blob-37nb < border-radius*/
 /*inspiration: http://jsfiddle.net/1fevoyze/ < div as background*/
 section > div[data-bind='background--blob'] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,6 +116,9 @@ section > div[data-bind='background--blob'] {
 /*end inspiration links*/
 
 div header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,6 +126,9 @@ div header {
 }
 
 blockquote {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,7 +144,20 @@ section > div[data-bind='background--blob'] > div {
   overflow-y: scroll;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+section > div[data-bind='background--blob'] > div::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+section > div[data-bind='background--blob'] > div {
+  -ms-overflow-style: none;
+}
+
 section > div[data-bind='background--blob'] > div > article {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -166,8 +194,11 @@ div[data-bind='dish'] p {
 div[data-bind='price'] {
   flex: 1;
 
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 
   font-size: 1em;
   font-weight: bold;
@@ -182,6 +213,9 @@ div[data-bind='price']:after {
 }
 
 main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,6 +224,9 @@ main {
 }
 
 header[data-bind='header'] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -213,4 +250,14 @@ header[data-bind='header'] {
 header[data-bind='header'] > p {
   font-size: 1.5em;
   color: var(--dark);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.example {
+  -ms-overflow-style: none;
 }
