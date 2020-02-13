@@ -12,394 +12,435 @@
 </head>
 <body>
 
-<header class="header">
-    <h1><span>Russ</span> <span>&</span> <span>Daughters</span></h1>
-    <p>appetizing since 1924</p>
-</header>
+<nav>
+    <div>
+        <input type="checkbox" id="1">
+        <label for="1">Noshes</label>
+        <section>
+            <div data-bind="background--blob">
+                <header>
+                    <h2>Noshes</h2>
+                    <span>Small dishes</span>
+                </header>
+
+                <div>
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Russ &amp; Daughters Knishes</h3>
+                            <p>Potato, carmelized onion, mustard</p>
+                        </div>
+                        <div data-bind="price">8</div> <!-- price -->
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Hot Smoke/Cold Smoke</h3>
+                            <p>Kippered baked Salmon &amp; Scottish smoked salmon spread, waffle-cut potato chips</p>
+                        </div>
+                        <div data-bind="price">13</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Potato latkes</h3>
+                            <p>Salmon roe and creme fraiche</p>
+                        </div>
+                        <div data-bind="price">13</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Kasha Varnishkas</h3>
+                            <p>Buckwheat, caramelized onion, bowtie egg noodles</p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Chopped liver</h3>
+                            <p>Matzo, pickled red onion</p>
+                        </div>
+                        <div data-bind="price">9</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Super heebster</h3>
+                            <p>Whitefish &amp; baked salmon salad, wasabi-infused fish roe, horseradish dill cream cheese,
+                                bagel
+                                toast</p>
+                        </div>
+                        <div data-bind="price">10</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Pastrami Russ</h3>
+                            <p>Pastrami-cured salmon, muenster cheese, sauerkraut, mustard, pickle, pretzel roll</p>
+                        </div>
+                        <div data-bind="price">12</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Sours</h3>
+                            <p>Pickled vegetables, pickles from the barrel</p>
+                        </div>
+                        <div data-bind="price">7</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div>
+        <input type="checkbox" id="2">
+        <label for="2">Boards</label>
+        <section>
+            <div data-bind="background--blob">
+                <header>
+                    <h2>Boards</h2>
+                    <span>Open-faced sandwiches</span>
+                </header>
+
+                <div>
+                    <article>
+                        <div data-bind="dish">
+                            <h3>The classic</h3>
+                            <p>Gaspe nova smoked salmon, cream cheese, bagel-bialy, tomato, onion, capers</p>
+                        </div>
+                        <div data-bind="price">16</div> <!-- price -->
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Mensch</h3>
+                            <p>Sturgeon, butter, bagel/bialy, tomato, onion, capers</p>
+                        </div>
+                        <div data-bind="price">22</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Shtetl</h3>
+                            <p>Smoked sable, goat cream cheese, bagel-bialy, tomato, onion, capers</p>
+                        </div>
+                        <div data-bind="price">18</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Yum kippered</h3>
+                            <p>Kippered (baked) salmon, cream cheese, bagel/bialy, tomato, onion, capers</p>
+                        </div>
+                        <div data-bind="price">16</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div>
+        <input type="checkbox" id="3">
+        <label for="3">Platters</label>
+        <section>
+            <div data-bind="background--blob">
+                <header>
+                    <h2>Platters</h2>
+                    <span>To be shared</span>
+                </header>
+
+                <div>
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Smoked fish</h3>
+                            <p>
+                                <em>Serves 3 - 4 people</em>
+                                with cream cheese, onion, tomato, capers &amp; new potato salad
+                                and Russ &amp; daughters bread basket
+                            </p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>The hattie</h3>
+                            <p>Smoked whitefish, kippered (baked) salmon, gaspe nova smoked salmon, sable</p>
+                        </div>
+                        <div data-bind="price">80</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>The ida</h3>
+                            <p>Scottish smoked salmon, gaspe nova smoked salmon, pastrami-cured salmon, gravlox</p>
+                        </div>
+                        <div data-bind="price">70</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>The anne</h3>
+                            <p>Western nova smoked salmon, private stock sturgeon, sable, smoked brook trout, wild alaskan
+                                salmon
+                                roe</p>
+                        </div>
+                        <div data-bind="price">90</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div>
+        <input type="checkbox" id="4">
+        <label for="4">Eggs</label>
+        <section>
+            <div data-bind="background--blob">
+                <header>
+                    <h2>Eggs</h2>
+                    <span>served all the time</span>
+                </header>
+
+                <blockquote>
+                    <p>"Eat in good health."</p>
+                    <cite>— Yiddish idiom</cite>
+                </blockquote>
+
+                <div>
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Lox, eggs &amp; onions</h3>
+                            <p>With toasted shissel rye</p>
+                        </div>
+                        <div data-bind="price">15</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Sturgeon, eggs &amp; onion</h3>
+                            <p>With toasted pumpernickel</p>
+                        </div>
+                        <div data-bind="price">19</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Bella's matzo brei</h3>
+                            <p>Matzo, egg, applesauce, sour cream</p>
+                        </div>
+                        <div data-bind="price">12</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Lower sunny side</h3>
+                            <p>Sunny side up eggs, gaspe nova smoked salmon, potato latkes</p>
+                        </div>
+                        <div data-bind="price">16</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Eggs benny</h3>
+                            <p>Poached eggs, scottish smoked salmon, sautéed spinach, hollandaise, challah</p>
+                        </div>
+                        <div data-bind="price">18</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Farm egg omelette</h3>
+                            <p>Gaspe nova smoked salmon, cream cheese</p>
+                        </div>
+                        <div data-bind="price">15</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Soft scrambled eggs &amp; caviar</h3>
+                            <p>Custard-like egg, caviar with challah</p>
+                        </div>
+                        <div data-bind="price">180</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div>
+        <input type="checkbox" id="5">
+        <label for="5">Soup</label>
+        <section>
+            <div data-bind="background--blob">
+                <header>
+                    <h2>Soup</h2>
+                </header>
+
+                <div>
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Matzo Ball</h3>
+                            <p>Chicken, vegetables, matzo ball</p>
+                        </div>
+                        <div data-bind="price">8</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Mushroom Barley</h3>
+                            <p>Mushrooms, barley with shissel rye bread</p>
+                        </div>
+                        <div data-bind="price">8</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Borscht</h3>
+                            <p>Served chilled: beets, sour cream, dill with pumpernickel</p>
+                        </div>
+                        <div data-bind="price">8</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Smoked Whitefish Chowder</h3>
+                            <p>Dill, esplette pepper, matzo</p>
+                        </div>
+                        <div data-bind="price">10</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div>
+        <input type="checkbox" id="6">
+        <label for="6">Salads</label>
+        <section>
+            <div data-bind="background--blob">
+                <header>
+                    <h2>Salads</h2>
+                </header>
+
+                <div>
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Mixed Green</h3>
+                            <p>Greens, fennel, dill, capers, citrus dressing</p>
+                        </div>
+                        <div data-bind="price">9</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Chopped Salad</h3>
+                            <p>Smoked whitefish, avocado, beets, egg, apple, mixed greens, matzo, buttermilk dressing</p>
+                        </div>
+                        <div data-bind="price">14</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Smoked Trout& Potato</h3>
+                            <p>Smoked trout, watercress, caper mustard dressing</p>
+                        </div>
+                        <div data-bind="price">14</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div>
+        <input type="checkbox" id="7">
+        <label for="7">Sweet</label>
+        <section>
+            <div data-bind="background--blob">
+                <header>
+                    <h2>Sweet</h2>
+                </header>
+
+                <blockquote>
+                    <p>"A meal without a sweet dish is like a story without a moral."</p>
+                    <cite>— Yiddish idiom</cite>
+                </blockquote>
+
+                <div>
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Blintzes</h3>
+                            <p>Fruit compote, sour cream</p>
+                        </div>
+                        <div data-bind="price">8</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Babka french toast</h3>
+                            <p>Chocolate babka, sour cream, berries</p>
+                        </div>
+                        <div data-bind="price">10</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Noodle kugel</h3>
+                            <p>Farmer cheese, raisins, egg noodles</p>
+                        </div>
+                        <div data-bind="price">7</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Challah bread pudding</h3>
+                            <p>Dried apricots, caramel sauce</p>
+                        </div>
+                        <div data-bind="price">9</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Halvah ice cream</h3>
+                            <p>Halvah, sesame, salted caramel</p>
+                        </div>
+                        <div data-bind="price">8</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Grandpa's grapefruit</h3>
+                            <p>Grapefruit, white germ, maple syrup</p>
+                        </div>
+                        <div data-bind="price">6</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>Baked farmer cheese</h3>
+                            <p>Blueberry, walnut &amp; honey with pumpernickel</p>
+                        </div>
+                        <div data-bind="price">7</div>
+                    </article>
+
+                    <article>
+                        <div data-bind="dish">
+                            <h3>cookie plate</h3>
+                            <p>Russ &amp; daughters cookies &amp; sweets</p>
+                        </div>
+                        <div data-bind="price">8</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </div>
+</nav>
 
 <main>
-
-    <section>
-            <div class="section-header">
-                <h2>Noshes</h2>
-                <span>Small dishes</span>
-            </div>
-
-            <div class="cards">
-                <article class="card">
-                    <div class="dish">
-                        <h3>Russ &amp; Daughters Knishes</h3>
-                        <p>Potato, carmelized onion, mustard</p>
-                    </div>
-                    <div class="price">8</div> <!-- price -->
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Hot Smoke/Cold Smoke</h3>
-                        <p>Kippered baked Salmon &amp; Scottish smoked salmon spread, waffle-cut potato chips</p>
-                    </div>
-                    <div class="price">13</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Potato latkes</h3>
-                        <p>Salmon roe and creme fraiche</p>
-                    </div>
-                    <div class="price">13</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Kasha Varnishkas</h3>
-                        <p>Buckwheat, caramelized onion, bowtie egg noodles</p>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Chopped liver</h3>
-                        <p>Matzo, pickled red onion</p>
-                    </div>
-                    <div class="price">9</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Super heebster</h3>
-                        <p>Whitefish &amp; baked salmon salad, wasabi-infused fish roe, horseradish dill cream cheese,
-                            bagel
-                            toast</p>
-                    </div>
-                    <div class="price">10</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Pastrami Russ</h3>
-                        <p>Pastrami-cured salmon, muenster cheese, sauerkraut, mustard, pickle, pretzel roll</p>
-                    </div>
-                    <div class="price">12</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Sours</h3>
-                        <p>Pickled vegetables, pickles from the barrel</p>
-                    </div>
-                    <div class="price">7</div>
-                </article>
-            </div>
-    </section>
-
-    <section>
-            <div class="section-header">
-                <h2>Boards</h2>
-                <span>Open-faced sandwiches</span>
-            </div>
-
-            <div class="cards">
-                <article class="card">
-                    <div class="dish">
-                        <h3>The classic</h3>
-                        <p>Gaspe nova smoked salmon, cream cheese, bagel-bialy, tomato, onion, capers</p>
-                    </div>
-                    <div class="price">16</div> <!-- price -->
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Mensch</h3>
-                        <p>Sturgeon, butter, bagel/bialy, tomato, onion, capers</p>
-                    </div>
-                    <div class="price">22</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Shtetl</h3>
-                        <p>Smoked sable, goat cream cheese, bagel-bialy, tomato, onion, capers</p>
-                    </div>
-                    <div class="price">18</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Yum kippered</h3>
-                        <p>Kippered (baked) salmon, cream cheese, bagel/bialy, tomato, onion, capers</p>
-                    </div>
-                    <div class="price">16</div>
-                </article>
-            </div>
-    </section>
-
-    <section>
-            <div class="section-header">
-                <h2>Platters</h2>
-                <span>To be shared</span>
-            </div>
-
-            <div class="cards">
-                <article class="card">
-                    <div class="dish">
-                        <h3>Smoked fish</h3>
-                        <p><em>Serves 3 - 4 people</em> with cream cheese, onion, tomato, capers &amp; new potato salad
-                            and Russ
-                            &amp; daughters bread basket</p>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>The hattie</h3>
-                        <p>Smoked whitefish, kippered (baked) salmon, gaspe nova smoked salmon, sable</p>
-                    </div>
-                    <div class="price">80</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>The ida</h3>
-                        <p>Scottish smoked salmon, gaspe nova smoked salmon, pastrami-cured salmon, gravlox</p>
-                    </div>
-                    <div class="price">70</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>The anne</h3>
-                        <p>Western nova smoked salmon, private stock sturgeon, sable, smoked brook trout, wild alaskan
-                            salmon
-                            roe</p>
-                    </div>
-                    <div class="price">90</div>
-                </article>
-            </div>
-    </section>
-
-    <section>
-            <div class="section-header">
-                <h2>Eggs</h2>
-                <span>served all the time</span>
-            </div>
-
-            <blockquote>
-<!--                <p>"Ess gezinter hayt."</p>-->
-                <p>"Eat in good health."</p>
-                <cite>— Yiddish idiom</cite>
-            </blockquote>
-
-            <div class="cards">
-                <article class="card">
-                    <div class="dish">
-                        <h3>Lox, eggs &amp; onions</h3>
-                        <p>With toasted shissel rye</p>
-                    </div>
-                    <div class="price">15</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Sturgeon, eggs &amp; onion</h3>
-                        <p>With toasted pumpernickel</p>
-                    </div>
-                    <div class="price">19</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Bella's matzo brei</h3>
-                        <p>Matzo, egg, applesauce, sour cream</p>
-                    </div>
-                    <div class="price">12</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Lower sunny side</h3>
-                        <p>Sunny side up eggs, gaspe nova smoked salmon, potato latkes</p>
-                    </div>
-                    <div class="price">16</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Eggs benny</h3>
-                        <p>Poached eggs, scottish smoked salmon, sautéed spinach, hollandaise, challah</p>
-                    </div>
-                    <div class="price">18</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Farm egg omelette</h3>
-                        <p>Gaspe nova smoked salmon, cream cheese</p>
-                    </div>
-                    <div class="price">15</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Soft scrambled eggs &amp; caviar</h3>
-                        <p>Custard-like egg, caviar with challah</p>
-                    </div>
-                    <div class="price">180</div>
-                </article>
-            </div>
-    </section>
-
-    <section>
-            <div class="section-header">
-                <h2>Soup</h2>
-            </div>
-
-            <div class="cards">
-                <article class="card">
-                    <div class="dish">
-                        <h3>Matzo Ball</h3>
-                        <p>Chicken, vegetables, matzo ball</p>
-                    </div>
-                    <div class="price">8</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Mushroom Barley</h3>
-                        <p>Mushrooms, barley with shissel rye bread</p>
-                    </div>
-                    <div class="price">8</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Borscht</h3>
-                        <p>Served chilled: beets, sour cream, dill with pumpernickel</p>
-                    </div>
-                    <div class="price">8</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Smoked Whitefish Chowder</h3>
-                        <p>Dill, esplette pepper, matzo</p>
-                    </div>
-                    <div class="price">10</div>
-                </article>
-            </div>
-        </details>
-    </section>
-
-    <section>
-            <div class="section-header">
-                <h2>Salads</h2>
-            </div>
-
-            <div class="cards">
-                <article class="card">
-                    <div class="dish">
-                        <h3>Mixed Green</h3>
-                        <p>Greens, fennel, dill, capers, citrus dressing</p>
-                    </div>
-                    <div class="price">9</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Chopped Salad</h3>
-                        <p>Smoked whitefish, avocado, beets, egg, apple, mixed greens, matzo, buttermilk dressing</p>
-                    </div>
-                    <div class="price">14</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Smoked Trout& Potato</h3>
-                        <p>Smoked trout, watercress, caper mustard dressing</p>
-                    </div>
-                    <div class="price">14</div>
-                </article>
-            </div>
-    </section>
-
-    <section>
-            <div class="section-header">
-                <h2>Sweet</h2>
-            </div>
-
-            <blockquote>
-<!--                <p>"A moltsayt on a tsimes iz via a mayse on a moshl."</p>-->
-                <p>"A meal without a sweet dish is like a story without a moral."</p>
-                <cite>— Yiddish idiom</cite>
-            </blockquote>
-
-            <div class="cards">
-                <article class="card">
-                    <div class="dish">
-                        <h3>Blintzes</h3>
-                        <p>Fruit compote, sour cream</p>
-                    </div>
-                    <div class="price">8</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Babka french toast</h3>
-                        <p>Chocolate babka, sour cream, berries</p>
-                    </div>
-                    <div class="price">10</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Noodle kugel</h3>
-                        <p>Farmer cheese, raisins, egg noodles</p>
-                    </div>
-                    <div class="price">7</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Challah bread pudding</h3>
-                        <p>Dried apricots, caramel sauce</p>
-                    </div>
-                    <div class="price">9</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Halvah ice cream</h3>
-                        <p>Halvah, sesame, salted caramel</p>
-                    </div>
-                    <div class="price">8</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Grandpa's grapefruit</h3>
-                        <p>Grapefruit, white germ, maple syrup</p>
-                    </div>
-                    <div class="price">6</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>Baked farmer cheese</h3>
-                        <p>Blueberry, walnut &amp; honey with pumpernickel</p>
-                    </div>
-                    <div class="price">7</div>
-                </article>
-
-                <article class="card">
-                    <div class="dish">
-                        <h3>cookie plate</h3>
-                        <p>Russ &amp; daughters cookies &amp; sweets</p>
-                    </div>
-                    <div class="price">8</div>
-                </article>
-            </div>
-    </section>
-
+    <header data-bind="header">
+        <h1><span>Russ</span> <span>&</span> <span>Daughters</span></h1>
+        <p>appetizing since 1924</p>
+    </header>
 </main>
 
 <!-- HTML taken and adjusted from https://codepen.io/julesforrest/pen/VqXvgQ -->
