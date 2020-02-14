@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <title>Responsive restaurant menu</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SUGGESTIONS FOR STYLING
     https://duckduckgo.com/?q=beautiful+restaurant+menus&t=ffab&iax=images&ia=images
     -->
@@ -29,7 +29,7 @@
                             <h3>Russ &amp; Daughters Knishes</h3>
                             <p>Potato, carmelized onion, mustard</p>
                         </div>
-                        <div data-bind="price">8</div> <!-- price -->
+                        <div data-bind="price"><p>8</p></div> <!-- price -->
                     </article>
 
                     <article>
@@ -37,7 +37,7 @@
                             <h3>Hot Smoke/Cold Smoke</h3>
                             <p>Kippered baked Salmon &amp; Scottish smoked salmon spread, waffle-cut potato chips</p>
                         </div>
-                        <div data-bind="price">13</div>
+                        <div data-bind="price"><p>13</p></div>
                     </article>
 
                     <article>
@@ -45,7 +45,7 @@
                             <h3>Potato latkes</h3>
                             <p>Salmon roe and creme fraiche</p>
                         </div>
-                        <div data-bind="price">13</div>
+                        <div data-bind="price"><p>13</p></div>
                     </article>
 
                     <article>
@@ -60,7 +60,7 @@
                             <h3>Chopped liver</h3>
                             <p>Matzo, pickled red onion</p>
                         </div>
-                        <div data-bind="price">9</div>
+                        <div data-bind="price"><p>9</p></div>
                     </article>
 
                     <article>
@@ -70,7 +70,7 @@
                                 bagel
                                 toast</p>
                         </div>
-                        <div data-bind="price">10</div>
+                        <div data-bind="price"><p>10</p></div>
                     </article>
 
                     <article>
@@ -78,7 +78,7 @@
                             <h3>Pastrami Russ</h3>
                             <p>Pastrami-cured salmon, muenster cheese, sauerkraut, mustard, pickle, pretzel roll</p>
                         </div>
-                        <div data-bind="price">12</div>
+                        <div data-bind="price"><p>12</p></div>
                     </article>
 
                     <article>
@@ -86,7 +86,7 @@
                             <h3>Sours</h3>
                             <p>Pickled vegetables, pickles from the barrel</p>
                         </div>
-                        <div data-bind="price">7</div>
+                        <div data-bind="price"><p>7</p></div>
                     </article>
                 </div>
             </div>
@@ -109,7 +109,7 @@
                             <h3>The classic</h3>
                             <p>Gaspe nova smoked salmon, cream cheese, bagel-bialy, tomato, onion, capers</p>
                         </div>
-                        <div data-bind="price">16</div> <!-- price -->
+                        <div data-bind="price"><p>16</p></div> <!-- price -->
                     </article>
 
                     <article>
@@ -117,7 +117,7 @@
                             <h3>Mensch</h3>
                             <p>Sturgeon, butter, bagel/bialy, tomato, onion, capers</p>
                         </div>
-                        <div data-bind="price">22</div>
+                        <div data-bind="price"><p>22</p></div>
                     </article>
 
                     <article>
@@ -125,7 +125,7 @@
                             <h3>Shtetl</h3>
                             <p>Smoked sable, goat cream cheese, bagel-bialy, tomato, onion, capers</p>
                         </div>
-                        <div data-bind="price">18</div>
+                        <div data-bind="price"><p>18</p></div>
                     </article>
 
                     <article>
@@ -133,7 +133,7 @@
                             <h3>Yum kippered</h3>
                             <p>Kippered (baked) salmon, cream cheese, bagel/bialy, tomato, onion, capers</p>
                         </div>
-                        <div data-bind="price">16</div>
+                        <div data-bind="price"><p>16</p></div>
                     </article>
                 </div>
             </div>
@@ -167,7 +167,7 @@
                             <h3>The hattie</h3>
                             <p>Smoked whitefish, kippered (baked) salmon, gaspe nova smoked salmon, sable</p>
                         </div>
-                        <div data-bind="price">80</div>
+                        <div data-bind="price"><p>80</p></div>
                     </article>
 
                     <article>
@@ -175,7 +175,7 @@
                             <h3>The ida</h3>
                             <p>Scottish smoked salmon, gaspe nova smoked salmon, pastrami-cured salmon, gravlox</p>
                         </div>
-                        <div data-bind="price">70</div>
+                        <div data-bind="price"><p>70</p></div>
                     </article>
 
                     <article>
@@ -185,7 +185,7 @@
                                 salmon
                                 roe</p>
                         </div>
-                        <div data-bind="price">90</div>
+                        <div data-bind="price"><p>90</p></div>
                     </article>
                 </div>
             </div>
@@ -196,16 +196,16 @@
         <input type="checkbox" id="4">
         <label for="4">Eggs</label>
         <section>
+            <blockquote>
+                <p>"Eat in good health."</p>
+                <cite>— Yiddish idiom</cite>
+            </blockquote>
+
             <div data-bind="background--blob">
                 <header>
                     <h2>Eggs</h2>
                     <span>served all the time</span>
                 </header>
-
-                <blockquote>
-                    <p>"Eat in good health."</p>
-                    <cite>— Yiddish idiom</cite>
-                </blockquote>
 
                 <div>
                     <article>
@@ -213,7 +213,7 @@
                             <h3>Lox, eggs &amp; onions</h3>
                             <p>With toasted shissel rye</p>
                         </div>
-                        <div data-bind="price">15</div>
+                        <div data-bind="price"><p>15</p></div>
                     </article>
 
                     <article>
@@ -221,7 +221,7 @@
                             <h3>Sturgeon, eggs &amp; onion</h3>
                             <p>With toasted pumpernickel</p>
                         </div>
-                        <div data-bind="price">19</div>
+                        <div data-bind="price"><p>19</p></div>
                     </article>
 
                     <article>
@@ -229,7 +229,7 @@
                             <h3>Bella's matzo brei</h3>
                             <p>Matzo, egg, applesauce, sour cream</p>
                         </div>
-                        <div data-bind="price">12</div>
+                        <div data-bind="price"><p>12</p></div>
                     </article>
 
                     <article>
@@ -237,7 +237,7 @@
                             <h3>Lower sunny side</h3>
                             <p>Sunny side up eggs, gaspe nova smoked salmon, potato latkes</p>
                         </div>
-                        <div data-bind="price">16</div>
+                        <div data-bind="price"><p>16</p></div>
                     </article>
 
                     <article>
@@ -245,7 +245,7 @@
                             <h3>Eggs benny</h3>
                             <p>Poached eggs, scottish smoked salmon, sautéed spinach, hollandaise, challah</p>
                         </div>
-                        <div data-bind="price">18</div>
+                        <div data-bind="price"><p>18</p></div>
                     </article>
 
                     <article>
@@ -253,7 +253,7 @@
                             <h3>Farm egg omelette</h3>
                             <p>Gaspe nova smoked salmon, cream cheese</p>
                         </div>
-                        <div data-bind="price">15</div>
+                        <div data-bind="price"><p>15</p></div>
                     </article>
 
                     <article>
@@ -261,7 +261,7 @@
                             <h3>Soft scrambled eggs &amp; caviar</h3>
                             <p>Custard-like egg, caviar with challah</p>
                         </div>
-                        <div data-bind="price">180</div>
+                        <div data-bind="price"><p>180</p></div>
                     </article>
                 </div>
             </div>
@@ -283,7 +283,7 @@
                             <h3>Matzo Ball</h3>
                             <p>Chicken, vegetables, matzo ball</p>
                         </div>
-                        <div data-bind="price">8</div>
+                        <div data-bind="price"><p>8</p></div>
                     </article>
 
                     <article>
@@ -291,7 +291,7 @@
                             <h3>Mushroom Barley</h3>
                             <p>Mushrooms, barley with shissel rye bread</p>
                         </div>
-                        <div data-bind="price">8</div>
+                        <div data-bind="price"><p>8</p></div>
                     </article>
 
                     <article>
@@ -299,7 +299,7 @@
                             <h3>Borscht</h3>
                             <p>Served chilled: beets, sour cream, dill with pumpernickel</p>
                         </div>
-                        <div data-bind="price">8</div>
+                        <div data-bind="price"><p>8</p></div>
                     </article>
 
                     <article>
@@ -307,7 +307,7 @@
                             <h3>Smoked Whitefish Chowder</h3>
                             <p>Dill, esplette pepper, matzo</p>
                         </div>
-                        <div data-bind="price">10</div>
+                        <div data-bind="price"><p>10</p></div>
                     </article>
                 </div>
             </div>
@@ -329,7 +329,7 @@
                             <h3>Mixed Green</h3>
                             <p>Greens, fennel, dill, capers, citrus dressing</p>
                         </div>
-                        <div data-bind="price">9</div>
+                        <div data-bind="price"><p>9</p></div>
                     </article>
 
                     <article>
@@ -337,7 +337,7 @@
                             <h3>Chopped Salad</h3>
                             <p>Smoked whitefish, avocado, beets, egg, apple, mixed greens, matzo, buttermilk dressing</p>
                         </div>
-                        <div data-bind="price">14</div>
+                        <div data-bind="price"><p>14</p></div>
                     </article>
 
                     <article>
@@ -345,7 +345,7 @@
                             <h3>Smoked Trout& Potato</h3>
                             <p>Smoked trout, watercress, caper mustard dressing</p>
                         </div>
-                        <div data-bind="price">14</div>
+                        <div data-bind="price"><p>14</p></div>
                     </article>
                 </div>
             </div>
@@ -356,15 +356,18 @@
         <input type="checkbox" id="7">
         <label for="7">Sweet</label>
         <section>
+            <blockquote>
+<!--                <img src="img/svg/circle.svg">-->
+<!--                <div>-->
+                    <p>"A meal without a sweet dish is like a story without a moral."</p>
+                    <cite>— Yiddish idiom</cite>
+<!--                </div>-->
+            </blockquote>
+
             <div data-bind="background--blob">
                 <header>
                     <h2>Sweet</h2>
                 </header>
-
-                <blockquote>
-                    <p>"A meal without a sweet dish is like a story without a moral."</p>
-                    <cite>— Yiddish idiom</cite>
-                </blockquote>
 
                 <div>
                     <article>
@@ -372,7 +375,7 @@
                             <h3>Blintzes</h3>
                             <p>Fruit compote, sour cream</p>
                         </div>
-                        <div data-bind="price">8</div>
+                        <div data-bind="price"><p>8</p></div>
                     </article>
 
                     <article>
@@ -380,7 +383,7 @@
                             <h3>Babka french toast</h3>
                             <p>Chocolate babka, sour cream, berries</p>
                         </div>
-                        <div data-bind="price">10</div>
+                        <div data-bind="price"><p>10</p></div>
                     </article>
 
                     <article>
@@ -388,7 +391,7 @@
                             <h3>Noodle kugel</h3>
                             <p>Farmer cheese, raisins, egg noodles</p>
                         </div>
-                        <div data-bind="price">7</div>
+                        <div data-bind="price"><p>7</p></div>
                     </article>
 
                     <article>
@@ -396,7 +399,7 @@
                             <h3>Challah bread pudding</h3>
                             <p>Dried apricots, caramel sauce</p>
                         </div>
-                        <div data-bind="price">9</div>
+                        <div data-bind="price"><p>9</p></div>
                     </article>
 
                     <article>
@@ -404,7 +407,7 @@
                             <h3>Halvah ice cream</h3>
                             <p>Halvah, sesame, salted caramel</p>
                         </div>
-                        <div data-bind="price">8</div>
+                        <div data-bind="price"><p>8</p></div>
                     </article>
 
                     <article>
@@ -412,7 +415,7 @@
                             <h3>Grandpa's grapefruit</h3>
                             <p>Grapefruit, white germ, maple syrup</p>
                         </div>
-                        <div data-bind="price">6</div>
+                        <div data-bind="price"><p>6</p></div>
                     </article>
 
                     <article>
@@ -420,7 +423,7 @@
                             <h3>Baked farmer cheese</h3>
                             <p>Blueberry, walnut &amp; honey with pumpernickel</p>
                         </div>
-                        <div data-bind="price">7</div>
+                        <div data-bind="price"><p>7</p></div>
                     </article>
 
                     <article>
@@ -428,7 +431,7 @@
                             <h3>cookie plate</h3>
                             <p>Russ &amp; daughters cookies &amp; sweets</p>
                         </div>
-                        <div data-bind="price">8</div>
+                        <div data-bind="price"><p>8</p></div>
                     </article>
                 </div>
             </div>
@@ -437,9 +440,18 @@
 </nav>
 
 <main>
+    <div data-bind="header-2">
+        <div>
+            <h1>Russ & Daughters</h1>
+            <p>appetizing since 1924</p>
+        </div>
+    </div>
+
     <header data-bind="header">
-        <h1><span>Russ</span> <span>&</span> <span>Daughters</span></h1>
-        <p>appetizing since 1924</p>
+        <div>
+            <h1>Russ & Daughters</h1>
+            <p>appetizing since 1924</p>
+        </div>
     </header>
 </main>
 
