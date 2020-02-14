@@ -103,6 +103,16 @@ input[type="radio"]:checked ~ label ~ section > div {
   max-height: 100vh;
 }
 
+article:nth-child(odd){
+  transform: skew(10deg);
+  transition: transform 5s;
+}
+
+article:nth-child(even){
+  transform: skew(-10deg);
+  transition: transform 5s;
+}
+
 /*inspiration: https://codepen.io/Ninaiskel/pen/MWWgMwL < blob*/
 /*inspiration: https://dev.to/equinusocio/making-a-css-blob-37nb < border-radius*/
 /*inspiration: http://jsfiddle.net/1fevoyze/ < div as background*/
