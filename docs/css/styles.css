@@ -1,7 +1,4 @@
 :root {
-  /*--blob: hsl(66, 77%, 44%);*/
-  /*--font-dark: #333;*/
-  /*--font-light: #F5F5F5;*/
   --background: hsl(0, 0%, 20%);
   --shades: 0 0 5px 0 rgba(0, 0, 0, 0.16);
 
@@ -30,7 +27,6 @@ body {
 h1 {
   font-size: 6vw;
   margin: 0;
-  transition: font-size 5s;
 }
 
 /*background-clip inspiration: https://www.youtube.com/watch?v=9Kr3T4Ndl-o*/
@@ -91,26 +87,79 @@ nav > div > label {
   cursor: context-menu;
 }
 
-nav > div > section > blockquote,
-nav > div > section > div {
+nav > div > section > blockquote {
   opacity: 0;
+}
+nav > div > section > div {
   max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
 }
 
-input[type="radio"]:checked ~ label ~ section > blockquote,
-input[type="radio"]:checked ~ label ~ section > div {
+input[type="radio"]:checked ~ label ~ section > blockquote {
   opacity: 1;
+}
+
+input[type="radio"]:checked ~ label ~ section > div {
   max-height: 100vh;
 }
 
-article:nth-child(odd){
+article:nth-child(even){
   transform: skew(10deg);
-  transition: transform 5s;
+  animation: skewing-even 2s linear infinite alternate;
 }
 
-article:nth-child(even){
+article:nth-child(odd){
   transform: skew(-10deg);
-  transition: transform 5s;
+  animation: skewing-odd 2s linear infinite alternate;
+}
+
+@keyframes skewing-even {
+  0% {
+    -webkit-transform: skew(10deg);
+    -moz-transform: skew(10deg);
+    -ms-transform: skew(10deg);
+    -o-transform: skew(10deg);
+    transform: skew(10deg);
+  }
+  50% {
+    -webkit-transform: skew(0deg);
+    -moz-transform: skew(0deg);
+    -ms-transform: skew(0deg);
+    -o-transform: skew(0deg);
+    transform: skew(0deg);
+  }
+  100% {
+    -webkit-transform: skew(-10deg);
+    -moz-transform: skew(-10deg);
+    -ms-transform: skew(-10deg);
+    -o-transform: skew(-10deg);
+    transform: skew(-10deg);
+  }
+}
+
+@keyframes skewing-odd {
+  0% {
+    -webkit-transform: skew(-10deg);
+    -moz-transform: skew(-10deg);
+    -ms-transform: skew(-10deg);
+    -o-transform: skew(-10deg);
+    transform: skew(-10deg);
+  }
+  50% {
+    -webkit-transform: skew(0deg);
+    -moz-transform: skew(0deg);
+    -ms-transform: skew(0deg);
+    -o-transform: skew(0deg);
+    transform: skew(0deg);
+  }
+  100% {
+    -webkit-transform: skew(10deg);
+    -moz-transform: skew(10deg);
+    -ms-transform: skew(10deg);
+    -o-transform: skew(10deg);
+    transform: skew(10deg);
+  }
 }
 
 /*inspiration: https://codepen.io/Ninaiskel/pen/MWWgMwL < blob*/
@@ -314,22 +363,47 @@ header[data-bind='header'] {
 
 div[data-bind='header-2'] > div > p,
 header[data-bind='header'] > div > p {
-  font-size: 1.5em;
+  font-size: 2.5vw;
   text-align: center;
 }
 
-header[data-bind='header'] > div,
 header[data-bind='header'] > div {
   color: var(--light);
 }
 
-div[data-bind='header-2'] > div,
 div[data-bind='header-2'] > div {
   color: var(--blue);
+}
+
+header[data-bind='header'] > div,
+div[data-bind='header-2'] > div {
+  animation: sliding 5s linear infinite alternate;
+}
+
+@keyframes sliding {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10vw, 0);
+  }
+  75% {
+    transform: translate(-10vw, 0);
+  }
 }
 
 /*img {*/
 /*  filter: drop-shadow(0px 0px 5px rgba(0,0,0,.12));*/
 /*}*/
+
+@media (prefers-reduced-motion: reduce) {
+  section > div[data-bind='background--blob'],
+  header[data-bind='header'] > div,
+  div[data-bind='header-2'] > div,
+  article:nth-child(odd),
+  article:nth-child(even){
+    animation: none;
+  }
+}
 
 /*cursor: https://www.youtube.com/watch?v=nMgB-GQzEdQ*/
