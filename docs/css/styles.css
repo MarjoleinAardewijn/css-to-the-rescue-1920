@@ -30,7 +30,7 @@ body {
 h1 {
   font-size: 6vw;
   margin: 0;
-  transition: 5s;
+  transition: font-size 5s;
 }
 
 /*background-clip inspiration: https://www.youtube.com/watch?v=9Kr3T4Ndl-o*/
