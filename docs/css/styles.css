@@ -12,12 +12,22 @@
   --card-light: hsl(0, 0%, 93%);
   --nav: hsla(0, 0%, 20%, 0.5);
   --box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+  --rainbow-red: hsl(0,100%,50%);
+  --rainbow-orange: hsl(30,100%,50%);
+  --rainbow-yellow: hsl(60,100%,50%);
+  --rainbow-green: hsl(120,100%,50%);
+  --rainbow-cyan: hsl(180,100%,50%);
+  --rainbow-blue: hsl(240,100%,50%);
+  --rainbow-purple: hsl(270,100%,50%);
+  --rainbow-magenta:  hsl(300,100%,50%);
 }
 
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
   position: relative;
+  cursor: url(../img/cursor/cursor-donut-pink.png), auto;
 }
 
 * {
@@ -25,13 +35,16 @@ body {
 }
 
 h1 {
-  font-size: 6vw;
+  /*Responsive Font Size: https://css-tricks.com/books/fundamental-css-tactics/scale-typography-screen-size/ */
+  /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+  font-size: calc(22px + (100 - 22) * ((100vw - 300px) / (1600 - 300)));
   margin: 0;
 }
 
 /*background-clip inspiration: https://www.youtube.com/watch?v=9Kr3T4Ndl-o*/
 h2 {
-  font-size: 4vw;
+  /*font-size: 4vw; */
+  font-size: calc(26px + (75 - 26) * ((100vw - 300px) / (1600 - 300)));
   text-transform: uppercase;
 
   margin-bottom: 0;
@@ -44,21 +57,31 @@ h2 {
 }
 
 h3 {
-  font-size: 1.6vw;
+  /*font-size: 1.6vw;*/
+  font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)))
 }
 
 cite,
 label,
 span,
 p {
-  font-size: 1.4vw;
+  /*font-size: 1.4vw;*/
+  font-size: calc(10px + (16 - 10) * ((100vw - 300px) / (1600 - 300)));
+}
+
+/*background-position x%y%: https://www.w3schools.com/cssref/pr_background-position.asp*/
+body > section {
+  position: absolute;
+  width: 100vw;
+  height: 15vh;
+  background: url(../img/svg/donut-pink.svg) 5% 50% no-repeat, url(../img/svg/union-rings.svg) 25% 50% no-repeat ,url(../img/svg/milkshake.svg) 50% 50% no-repeat, url(../img/svg/cup-cake.svg) 75% 50% no-repeat, url(../img/svg/donut-yellow.svg) 95% 50% no-repeat;
+  background-size: 50px auto;
+  bottom: 0;
+  z-index: 1002;
 }
 
 /*inspiration: https://css-tricks.com/the-checkbox-hack/*/
 nav {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   justify-content: flex-end;
 
@@ -72,9 +95,6 @@ nav {
 }
 
 nav > div {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   margin: 1vw;
 }
@@ -84,7 +104,40 @@ input[type="radio"] {
 }
 
 nav > div > label {
-  cursor: context-menu;
+  cursor: url(../img/cursor/cursor-donut-yellow.png), context-menu;
+}
+
+/*Colors rainbow from: http://www.comfsm.fm/~dleeling/cis/hsl_rainbow.html*/
+nav > div > label[for="0"] {
+  color: var(--rainbow-red);
+}
+
+nav > div > label[for="1"]{
+  color: var(--rainbow-orange);
+}
+
+nav > div > label[for="2"] {
+  color: var(--rainbow-yellow);
+}
+
+nav > div > label[for="3"] {
+  color: var(--rainbow-green);
+}
+
+nav > div > label[for="4"] {
+  color: var(--rainbow-cyan);
+}
+
+nav > div > label[for="5"] {
+  color: var(--rainbow-blue);
+}
+
+nav > div > label[for="6"] {
+  color: var(--rainbow-purple);
+}
+
+nav > div > label[for="7"] {
+  color: var(--rainbow-magenta);
 }
 
 nav > div > section > blockquote {
@@ -116,48 +169,24 @@ article:nth-child(odd){
 
 @keyframes skewing-even {
   0% {
-    -webkit-transform: skew(10deg);
-    -moz-transform: skew(10deg);
-    -ms-transform: skew(10deg);
-    -o-transform: skew(10deg);
     transform: skew(10deg);
   }
   50% {
-    -webkit-transform: skew(0deg);
-    -moz-transform: skew(0deg);
-    -ms-transform: skew(0deg);
-    -o-transform: skew(0deg);
     transform: skew(0deg);
   }
   100% {
-    -webkit-transform: skew(-10deg);
-    -moz-transform: skew(-10deg);
-    -ms-transform: skew(-10deg);
-    -o-transform: skew(-10deg);
     transform: skew(-10deg);
   }
 }
 
 @keyframes skewing-odd {
   0% {
-    -webkit-transform: skew(-10deg);
-    -moz-transform: skew(-10deg);
-    -ms-transform: skew(-10deg);
-    -o-transform: skew(-10deg);
     transform: skew(-10deg);
   }
   50% {
-    -webkit-transform: skew(0deg);
-    -moz-transform: skew(0deg);
-    -ms-transform: skew(0deg);
-    -o-transform: skew(0deg);
     transform: skew(0deg);
   }
   100% {
-    -webkit-transform: skew(10deg);
-    -moz-transform: skew(10deg);
-    -ms-transform: skew(10deg);
-    -o-transform: skew(10deg);
     transform: skew(10deg);
   }
 }
@@ -166,9 +195,6 @@ article:nth-child(odd){
 /*inspiration: https://dev.to/equinusocio/making-a-css-blob-37nb < border-radius*/
 /*inspiration: http://jsfiddle.net/1fevoyze/ < div as background*/
 section > div[data-bind='background--blob'] {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,7 +204,7 @@ section > div[data-bind='background--blob'] {
   box-shadow: var(--shades);
 
   animation: blob 8s ease-in-out infinite;
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  border-radius: 65% 45% 35% 75% / 65% 35% 75% 45%;
   transition: all 1s;
 
   height: 80vh;
@@ -189,27 +215,26 @@ section > div[data-bind='background--blob'] {
   left: 10vw;
 
   z-index: 1000;
+
+  cursor: url(../img/cursor/cursor-milkshake.png), auto;
 }
 
 @keyframes blob {
   0% {
-    border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+    border-radius: 65% 45% 35% 75% / 65% 35% 75% 45%;
   }
 
   50% {
-    border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
+    border-radius: 35% 65% 75% 45% / 55% 65% 35% 65%;
   }
 
   100% {
-    border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+    border-radius: 65% 45% 35% 75% / 65% 35% 75% 45%;
   }
 }
 /*end inspiration links*/
 
 div header {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -217,9 +242,6 @@ div header {
 }
 
 blockquote {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -245,7 +267,7 @@ section > div[data-bind='background--blob'] > div {
   display: block;
   margin: 1.5rem 0;
 
-  width: 50%;
+  width: 65%;
   height: 50%;
   overflow-y: scroll;
 }
@@ -262,9 +284,6 @@ section > div[data-bind='background--blob'] > div {
 }
 
 section > div[data-bind='background--blob'] > div > article {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -281,6 +300,8 @@ section > div[data-bind='background--blob'] > div > article {
 
   margin: 0.5rem;
   padding: 0.5rem;
+
+  cursor: url(../img/cursor/cursor-cup-cake.png), auto;
 }
 
 div[data-bind='dish'] {
@@ -307,7 +328,7 @@ div[data-bind='price'] {
 }
 
 div[data-bind='price'] > p {
-  font-size: 1.6vw;
+  /*font-size: 1.6vw;*/
   font-weight: bold;
 
   margin: 0;
@@ -322,9 +343,6 @@ div[data-bind='price'] > p:after {
 }
 
 main {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   position: inherit;
   align-items: center;
@@ -335,9 +353,6 @@ main {
 
 div[data-bind='header-2'],
 header[data-bind='header'] {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -363,7 +378,7 @@ header[data-bind='header'] {
 
 div[data-bind='header-2'] > div > p,
 header[data-bind='header'] > div > p {
-  font-size: 2.5vw;
+  font-size: calc(12px + (30 - 12) * ((100vw - 300px) / (1600 - 300)));
   text-align: center;
 }
 
@@ -380,6 +395,7 @@ div[data-bind='header-2'] > div {
   animation: sliding 5s linear infinite alternate;
 }
 
+/*translate(): https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate*/
 @keyframes sliding {
   0%, 100% {
     transform: translate(0, 0);
@@ -396,6 +412,7 @@ div[data-bind='header-2'] > div {
 /*  filter: drop-shadow(0px 0px 5px rgba(0,0,0,.12));*/
 /*}*/
 
+/*Prefers Reduce Motion: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion*/
 @media (prefers-reduced-motion: reduce) {
   section > div[data-bind='background--blob'],
   header[data-bind='header'] > div,
@@ -407,3 +424,4 @@ div[data-bind='header-2'] > div {
 }
 
 /*cursor: https://www.youtube.com/watch?v=nMgB-GQzEdQ*/
+/*Images: https://www.freepik.com/*/
