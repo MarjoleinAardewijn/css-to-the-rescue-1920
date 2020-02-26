@@ -1,8 +1,10 @@
 # CSS to the Rescue @cmda-minor-web 19-20
 
-_This course is in English_
+In this three week course I create an innovative, experimental, yet pleasurable user experience by using CSS and SVG. No Javascript allowed.
 
-In this three week course you are going to create an innovative, experimantal, yet pleasurable user experience by using CSS and SVG. No Javascrpt allowed.
+## Table of Content
+- [Learning goals](#Learning-goals)
+- 
 
 ## Learning goals
 - _You understand the broader scope of CSS: You can show that CSS can be used for more than just styling web pages._
@@ -12,33 +14,43 @@ In this three week course you are going to create an innovative, experimantal, y
 
 [Rubric](https://docs.google.com/spreadsheets/d/1Xv48MSiACNmnM6nXpGGUb8mJDC459uSaxJszO_zLEp8/edit?usp=sharing)
 
-## Programm
+## Chosen assignment
 
-### Week 1 - 👁 C what you did there
+I chose to make a responsive restaurant menu.
 
-[See all the details of week 1 here](week1/).
+## Demo
 
-Goals of this week: 
+[Live demo](https://marjoleinaardewijn.github.io/css-to-the-rescue-1920/)
 
-- Be inspired
-- Discuss hot CSS topics.
-- Get going!
+## Used contexts
 
-<!-- [Opdrachten](https://drive.google.com/open?id=1OVhWQNaCgSluYviTKKWcApkyPd23xow1PiExb8GYANM) -->
+You have to add at least one extra context to your site
 
-<!-- [Slides](https://drive.google.com/open?id=1Rjl9xqXoKniQSRJPdkU1O5YwWC33SJK8KiV0a-H_xZU) -->
+- [x] prefers-reduced-motion.
+- [x] animations.
+- [ ] dark-mode.
+- [x] input type (pointer).
+- [x] hsl / hsla.
+- [x] clip-path / background-clip.
 
-### Week 2 - Create Stuff, 🙃 Smile 
+## Restrictions
 
-This week’s goals: Moar inspiration, create stuff, break stuff, and learn from each other.
+You have to work with _at least_ two of these restrictions.
+For this assignment I have chosen the following two restrictions:
 
-<!-- [Opdrachten](https://drive.google.com/open?id=1GMDTdW3LycAYpZSFI6gk_lrKrx8-zLWrNh69aaVEH5Y) -->
+- [x] When SVG meets CSS: Shapes / Masks / SVG
+- [ ] Two colours
+- [x] Responsive without media queries
 
-<!-- [Slides](https://drive.google.com/open?id=1IqQeu1m0dQiSC_KCvrn8eencAgtYe7X6qT-gm0n9Bmc) -->
+## The *Selector First* CSS Methodology
 
-### Week 3 - 🎪 Show time
+For this assignment I had to work with the so called *Selector First* CSS Methodology. This means that I _had to_ use a wide variety of CSS selectors. ID’s are only allowed to trigger the `:target` selector. If I really needed them, I was allowed to use a few classes. In order to differentiate between.
 
-Goals: Blow us away.
+## Sources
+
+## Credits
+
+## Licence
 
 <!-- [Opdrachten](https://drive.google.com/open?id=13pKQu72pshaEzKw9q5JHLa-aop85nMP6nDCdqioWjoQ) -->
 
