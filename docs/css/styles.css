@@ -1,427 +1,582 @@
 :root {
-  --background: hsl(0, 0%, 20%);
-  --shades: 0 0 5px 0 rgba(0, 0, 0, 0.16);
+    --shades: 0 0 5px 0 hsla(0, 0%, 0%, 0.16);
+    --box-shadow: 0 2px 5px 0 hsla(0, 0%, 0%, 0.16), 0 2px 10px 0 hsla(0, 0%, 0%, 0.16);
+    --drop-shadow: drop-shadow(0px 0px 5px rgba(0, 0, 0, .12));
 
-  --dark: hsl(0, 0%, 20%);
-  --light: hsl(0, 0%, 96%);
-  --blue: hsl(201, 74%, 52%);
-  --dark-blue: hsl(200, 35%, 37%);
-  --light-blue: hsl(201, 85%, 79%);
-  --lightgray: hsl(0, 0%, 69%);
-  --card-dark: hsl(0, 0%, 15%);
-  --card-light: hsl(0, 0%, 93%);
-  --nav: hsla(0, 0%, 20%, 0.5);
-  --box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    --light: hsl(0, 0%, 96%);
+    --blue: hsl(201, 74%, 52%);
+    --light-opacity: hsla(0, 0%, 96%, 0.5);
+    --blue-opacity: hsla(201, 74%, 52%, 0.5);
+    --blue-opacity-2: hsla(201, 74%, 52%, 0.16);
+    --gradient-opacity: linear-gradient(90deg, var(--light-opacity) 0%, var(--blue-opacity) 100%);
+    --gradient: linear-gradient(90deg, var(--light) 15%, var(--blue) 100%);
 
-  --rainbow-red: hsl(0,100%,50%);
-  --rainbow-orange: hsl(30,100%,50%);
-  --rainbow-yellow: hsl(60,100%,50%);
-  --rainbow-green: hsl(120,100%,50%);
-  --rainbow-cyan: hsl(180,100%,50%);
-  --rainbow-blue: hsl(240,100%,50%);
-  --rainbow-purple: hsl(270,100%,50%);
-  --rainbow-magenta:  hsl(300,100%,50%);
+    --border-radius--blob-1: 65% 45% 35% 75% / 65% 35% 75% 45%;
+    --border-radius--blob-2: 35% 65% 75% 45% / 55% 65% 35% 65%;
+
+    --shape-1: polygon(93% 0, 100% 84%, 13% 100%, 0 11%);
+    --shape-2: polygon(100% 6%, 100% 91%, 6% 100%, 0 0);
+    --shape-3: polygon(100% 0, 94% 100%, 13% 100%, 0 11%);
+    --shape-4: polygon(100% 0, 100% 84%, 3% 100%, 0 15%);
+    --shape-5: polygon(100% 16%, 94% 100%, 3% 100%, 0 0);
+    --shape-6: polygon(100% 0, 89% 100%, 0 100%, 8% 4%);
+    --shape-7: polygon(100% 4%, 89% 100%, 4% 100%, 0 1%);
+    --shape-8: polygon(95% 0, 100% 88%, 0 100%, 4% 9%);
+    --shape-9: polygon(100% 8%, 96% 90%, 6% 100%, 0 0);
 }
 
 body {
-  margin: 0;
-  font-family: Roboto, sans-serif;
-  position: relative;
-  cursor: url(../img/cursor/cursor-donut-pink.png), auto;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    position: relative;
+    cursor: url(../img/cursor/cursor-pizza.png), auto;
 }
 
 * {
-  margin: 0;
+    margin: 0;
 }
 
 h1 {
-  /*Responsive Font Size: https://css-tricks.com/books/fundamental-css-tactics/scale-typography-screen-size/ */
-  /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
-  font-size: calc(22px + (100 - 22) * ((100vw - 300px) / (1600 - 300)));
-  margin: 0;
+    /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+    font-size: calc(22px + (100 - 22) * ((100vw - 300px) / (1600 - 300)));
+    margin: 0;
 }
 
-/*background-clip inspiration: https://www.youtube.com/watch?v=9Kr3T4Ndl-o*/
 h2 {
-  /*font-size: 4vw; */
-  font-size: calc(26px + (75 - 26) * ((100vw - 300px) / (1600 - 300)));
-  text-transform: uppercase;
-
-  margin-bottom: 0;
-
-  background-image: url("../img/134.jpg");
-  background-size: cover;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+    font-size: calc(26px + (75 - 26) * ((100vw - 300px) / (1600 - 300)));
+    color: transparent;
+    text-transform: uppercase;
+    background-image: url("../img/134.jpg");
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin-bottom: 0;
 }
 
 h3 {
-  /*font-size: 1.6vw;*/
-  font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)))
+    font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
 }
 
 cite,
 label,
 span,
 p {
-  /*font-size: 1.4vw;*/
-  font-size: calc(10px + (16 - 10) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(10px + (16 - 10) * ((100vw - 300px) / (1600 - 300)));
 }
 
-/*background-position x%y%: https://www.w3schools.com/cssref/pr_background-position.asp*/
-body > section {
-  position: absolute;
-  width: 100vw;
-  height: 15vh;
-  background: url(../img/svg/donut-pink.svg) 5% 50% no-repeat, url(../img/svg/union-rings.svg) 25% 50% no-repeat ,url(../img/svg/milkshake.svg) 50% 50% no-repeat, url(../img/svg/cup-cake.svg) 75% 50% no-repeat, url(../img/svg/donut-yellow.svg) 95% 50% no-repeat;
-  background-size: 50px auto;
-  bottom: 0;
-  z-index: 1002;
-}
-
-/*inspiration: https://css-tricks.com/the-checkbox-hack/*/
 nav {
-  display: flex;
-  justify-content: flex-end;
-
-  background: var(--nav);
-
-  position: fixed;
-  width: 100vw;
-  top: 0;
-
-  z-index: 999;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    background: var(--gradient-opacity);
+    width: 100vw;
+    top: 0;
+    z-index: 999;
 }
 
 nav > div {
-  display: flex;
-  margin: 1vw;
+    display: flex;
+    padding: 1vw;
 }
 
 input[type="radio"] {
-  display: none;
+    display: none;
 }
 
-nav > div > label {
-  cursor: url(../img/cursor/cursor-donut-yellow.png), context-menu;
+label[for] {
+    cursor: url(../img/cursor/cursor-chicken.png), context-menu;
+    mix-blend-mode: soft-light;
 }
 
-/*Colors rainbow from: http://www.comfsm.fm/~dleeling/cis/hsl_rainbow.html*/
-nav > div > label[for="0"] {
-  color: var(--rainbow-red);
-}
-
-nav > div > label[for="1"]{
-  color: var(--rainbow-orange);
-}
-
-nav > div > label[for="2"] {
-  color: var(--rainbow-yellow);
-}
-
-nav > div > label[for="3"] {
-  color: var(--rainbow-green);
-}
-
-nav > div > label[for="4"] {
-  color: var(--rainbow-cyan);
-}
-
-nav > div > label[for="5"] {
-  color: var(--rainbow-blue);
-}
-
-nav > div > label[for="6"] {
-  color: var(--rainbow-purple);
-}
-
-nav > div > label[for="7"] {
-  color: var(--rainbow-magenta);
+label[for]:hover {
+    mix-blend-mode: darken;
 }
 
 nav > div > section > blockquote {
-  opacity: 0;
+    opacity: 0;
 }
+
 nav > div > section > div {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
 }
 
 input[type="radio"]:checked ~ label ~ section > blockquote {
-  opacity: 1;
+    opacity: 1;
 }
 
 input[type="radio"]:checked ~ label ~ section > div {
-  max-height: 100vh;
+    max-height: 100vh;
 }
 
-article:nth-child(even){
-  transform: skew(10deg);
-  animation: skewing-even 2s linear infinite alternate;
-}
-
-article:nth-child(odd){
-  transform: skew(-10deg);
-  animation: skewing-odd 2s linear infinite alternate;
-}
-
-@keyframes skewing-even {
-  0% {
+article:nth-child(even) {
     transform: skew(10deg);
-  }
-  50% {
-    transform: skew(0deg);
-  }
-  100% {
-    transform: skew(-10deg);
-  }
+    animation: skewing-even 5s linear infinite alternate;
 }
 
-@keyframes skewing-odd {
-  0% {
+article:nth-child(odd) {
     transform: skew(-10deg);
-  }
-  50% {
-    transform: skew(0deg);
-  }
-  100% {
-    transform: skew(10deg);
-  }
+    animation: skewing-odd 5s linear infinite alternate;
 }
-
-/*inspiration: https://codepen.io/Ninaiskel/pen/MWWgMwL < blob*/
-/*inspiration: https://dev.to/equinusocio/making-a-css-blob-37nb < border-radius*/
-/*inspiration: http://jsfiddle.net/1fevoyze/ < div as background*/
 section > div[data-bind='background--blob'] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  background: var(--light-blue);
-  box-shadow: var(--shades);
-
-  animation: blob 8s ease-in-out infinite;
-  border-radius: 65% 45% 35% 75% / 65% 35% 75% 45%;
-  transition: all 1s;
-
-  height: 80vh;
-  width: 80vw;
-
-  position: absolute;
-  top: 10vh;
-  left: 10vw;
-
-  z-index: 1000;
-
-  cursor: url(../img/cursor/cursor-milkshake.png), auto;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--gradient);
+    box-shadow: var(--shades);
+    animation: blob 25s ease-in-out infinite;
+    border-radius: var(--border-radius--blob-1);
+    transition: all 1s;
+    height: 80vh;
+    width: 80vw;
+    top: 10vh;
+    left: 10vw;
+    z-index: 1000;
+    cursor: url(../img/cursor/cursor-taco.png), auto;
 }
-
-@keyframes blob {
-  0% {
-    border-radius: 65% 45% 35% 75% / 65% 35% 75% 45%;
-  }
-
-  50% {
-    border-radius: 35% 65% 75% 45% / 55% 65% 35% 65%;
-  }
-
-  100% {
-    border-radius: 65% 45% 35% 75% / 65% 35% 75% 45%;
-  }
-}
-/*end inspiration links*/
 
 div header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 blockquote {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1.5rem;
+    position: absolute;
+    top: calc(45px + (100 - 45) * ((100vw - 300px) / (1600 - 300)));
+    right: calc(25px + (175 - 25) * ((100vw - 300px) / (1600 - 300)));
+    z-index: 1001;
+}
 
-  position: absolute;
-  top: 10vh;
-  right: 15vw;
+div[data-bind='shape'] > div > p,
+div[data-bind='shape'] > div > cite {
+    mix-blend-mode: overlay;
+}
 
-  width: 12vw;
-  height: 12vw;
+div[data-bind='shape'] {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(125px + (275 - 125) * ((100vw - 300px) / (1600 - 300)));
+    height: calc(125px + (275 - 125) * ((100vw - 300px) / (1600 - 300)));
+}
 
-  background-color: #fff;
-  border-radius: 50%;
-  box-shadow: var(--box-shadow);
+div[data-bind='shape'] > * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.17, .67, .83, .67);
+}
 
-  z-index: 1001;
+div[data-bind='shape'] div:nth-child(1) {
+    background: var(--light-opacity);
+    filter: var(--drop-shadow);
+    width: 98%;
+    height: 98%;
+    animation-name: morph-9;
+}
+
+div[data-bind='shape'] div:nth-child(2) {
+    background: var(--blue-opacity);
+    width: 87.5%;
+    height: 87.5%;
+    mix-blend-mode: color-burn;
+    animation-name: morph-1;
+}
+
+div[data-bind='shape'] div:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--blue);
+    width: 75%;
+    height: 75%;
+    mix-blend-mode: luminosity;
+    animation-name: morph-4;
 }
 
 section > div[data-bind='background--blob'] > div {
-  display: block;
-  margin: 1.5rem 0;
-
-  width: 65%;
-  height: 50%;
-  overflow-y: scroll;
+    display: block;
+    margin: 1.5rem 0;
+    width: 65%;
+    height: 50%;
+    overflow-y: scroll;
 }
 
-/*credits: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_hide_scrollbar_keep_func*/
-/* Hide scrollbar for Chrome, Safari and Opera */
 section > div[data-bind='background--blob'] > div::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 /* Hide scrollbar for IE and Edge */
-section > div[data-bind='background--blob'] > div {
-  -ms-overflow-style: none;
-}
+/*section > div[data-bind='background--blob'] > div {*/
+/*    -ms-overflow-style: none;*/
+/*}*/
 
 section > div[data-bind='background--blob'] > div > article {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--blue);
+    mix-blend-mode: multiply;
+    box-shadow: var(--box-shadow);
+    border-radius: 4px;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    cursor: url(../img/cursor/cursor-chilli-sauce.png), auto;
+}
 
-  background-color: var(--card-light);
-
-  -webkit-box-shadow: var(--box-shadow);
-  -moz-box-shadow: var(--box-shadow);
-  box-shadow: var(--box-shadow);
-
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-
-  margin: 0.5rem;
-  padding: 0.5rem;
-
-  cursor: url(../img/cursor/cursor-cup-cake.png), auto;
+span,
+div[data-bind='dish'],
+div[data-bind='price'] {
+    mix-blend-mode: overlay;
 }
 
 div[data-bind='dish'] {
-  flex: 10;
-}
-
-div[data-bind='dish'] h3 {
-  margin: 0;
+    flex: 10;
 }
 
 div[data-bind='dish'] p {
-  margin-top: 0.5rem;
-  margin-bottom: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
 }
 
 div[data-bind='price'] {
-  flex: 1;
-
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 div[data-bind='price'] > p {
-  /*font-size: 1.6vw;*/
-  font-weight: bold;
-
-  margin: 0;
+    font-weight: bold;
 }
 
-div[data-bind='price']> p:before {
-  content: '€';
+div[data-bind='price'] > p:before {
+    content: '€';
 }
 
 div[data-bind='price'] > p:after {
-  content: ',-';
+    content: ',-';
 }
 
 main {
-  display: flex;
-  position: inherit;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  z-index: 998;
+    position: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    z-index: 998;
 }
 
 div[data-bind='header-2'],
 header[data-bind='header'] {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  -webkit-box-shadow: var(--shades);
-  -moz-box-shadow: var(--shades);
-  box-shadow: var(--shades);
-
-  position: absolute;
-
-  height: 100vh;
-  width: 100vw;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shades);
+    height: 100vh;
+    width: 100vw;
 }
 
-/*clip-path credits: https://www.youtube.com/watch?v=YjnuuqVdadI*/
-
 header[data-bind='header'] {
-  background: var(--blue);
-
-  clip-path: polygon(0 0, 61% 0, 44% 100%, 0 100%);
+    background: var(--blue);
+    clip-path: polygon(0 0, 61% 0, 44% 100%, 0 100%);
 }
 
 div[data-bind='header-2'] > div > p,
 header[data-bind='header'] > div > p {
-  font-size: calc(12px + (30 - 12) * ((100vw - 300px) / (1600 - 300)));
-  text-align: center;
+    font-size: calc(12px + (30 - 12) * ((100vw - 300px) / (1600 - 300)));
+    text-align: center;
 }
 
 header[data-bind='header'] > div {
-  color: var(--light);
+    color: var(--light);
 }
 
 div[data-bind='header-2'] > div {
-  color: var(--blue);
+    color: var(--blue);
 }
 
 header[data-bind='header'] > div,
 div[data-bind='header-2'] > div {
-  animation: sliding 5s linear infinite alternate;
+    animation: sliding 5s linear infinite alternate;
 }
 
-/*translate(): https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate*/
-@keyframes sliding {
-  0%, 100% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(10vw, 0);
-  }
-  75% {
-    transform: translate(-10vw, 0);
-  }
+body > section {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 10vh;
+    bottom: 0;
+    z-index: 1002;
+    /*background: url(../img/svg/donut-pink.svg) 5% 50% no-repeat, url(../img/svg/union-rings.svg) 25% 50% no-repeat ,url(../img/svg/milkshake.svg) 50% 50% no-repeat, url(../img/svg/cupcake.svg) 75% 50% no-repeat, url(../img/svg/donut-yellow.svg) 95% 50% no-repeat;*/
+    /*background-size: 50px auto;*/
 }
 
-/*img {*/
-/*  filter: drop-shadow(0px 0px 5px rgba(0,0,0,.12));*/
-/*}*/
+svg {
+    width: calc(25px + (50 - 25) * ((100vw - 300px) / (1600 - 300)));
+    height: auto;
+    filter: var(--drop-shadow);
+}
 
-/*Prefers Reduce Motion: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion*/
+section > svg:first-child {
+    margin-left: calc(20px + (40 - 20) * ((100vw - 300px) / (1600 - 300)));
+}
+
+section > svg:last-child {
+    margin-right: calc(20px + (40 - 20) * ((100vw - 300px) / (1600 - 300)));
+}
+
+svg:hover {
+    animation: rotate 2s linear infinite;
+}
+
+/*SVGs Colors*/
+svg:nth-child(2) > g > g > path:nth-child(1) {
+    fill: hsl(37, 100%, 61%);
+}
+
+svg:nth-child(2) > g > g > path:nth-child(2) {
+    fill: hsl(24, 100%, 50%);
+}
+
+svg:nth-child(3) > g > g > path:nth-child(1) {
+    fill: hsl(59, 100%, 90%);
+}
+
+svg:nth-child(3) > g > g > path:nth-child(2) {
+    fill: hsl(187, 74%, 88%);
+}
+
+svg:nth-child(3) > g > g > path:nth-child(4) {
+    fill: hsl(333, 100%, 93%);
+}
+
+svg:nth-child(1) > g > g > path:nth-child(2),
+svg:nth-child(3) > g > g > path:nth-child(3),
+svg:nth-child(4) > g > g > path:nth-child(1) {
+    fill: hsl(332, 100%, 79%);
+}
+
+svg:nth-child(4) > g > g > path:nth-child(2) {
+    fill: hsl(12, 100%, 50%);
+}
+
+svg:nth-child(1) > g > g > path:nth-child(1),
+svg:nth-child(5) > g > g > path:nth-child(1) {
+    fill: hsl(39, 76%, 57%);
+}
+
+svg:nth-child(1) > g > g > path:nth-child(3),
+svg:nth-child(4) > g > g > path:nth-child(3),
+svg:nth-child(5) > g > g > path:nth-child(2) {
+    fill: hsl(54, 100%, 51%);
+}
+
+svg:nth-child(1) > g > g > path:nth-child(4),
+svg:nth-child(2) > g > g > path:nth-child(3),
+svg:nth-child(3) > g > g > path:nth-child(5),
+svg:nth-child(4) > g > g > path:nth-child(4),
+svg:nth-child(5) > g > g > path:nth-child(3) {
+    fill: hsl(29, 60%, 17%);
+}
+
+/*SVG Cursor*/
+svg:nth-child(1) {
+    cursor: url(../img/cursor/cursor-coffee-to-go.png), auto;
+}
+
+svg:nth-child(2) {
+    cursor: url(../img/cursor/cursor-union-rings.png), auto;
+}
+
+svg:nth-child(3) {
+    cursor: url(../img/cursor/cursor-hamburger.png), auto;
+}
+
+svg:nth-child(4) {
+    cursor: url(../img/cursor/cursor-soda.png), auto;
+}
+
+svg:nth-child(5) {
+    cursor: url(../img/cursor/cursor-coffee.png), auto;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  section > div[data-bind='background--blob'],
-  header[data-bind='header'] > div,
-  div[data-bind='header-2'] > div,
-  article:nth-child(odd),
-  article:nth-child(even){
-    animation: none;
-  }
+    section > div[data-bind='background--blob'],
+    header[data-bind='header'] > div,
+    div[data-bind='header-2'] > div,
+    article:nth-child(odd),
+    article:nth-child(even),
+    svg:hover,
+    div[data-bind='shape'] div {
+        animation: none;
+    }
+
+    article:nth-child(odd),
+    article:nth-child(even) {
+        transform: none;
+    }
+
+    body,
+    section > div[data-bind='background--blob'],
+    section > div[data-bind='background--blob'] > div > article,
+    svg:nth-child(1),
+    svg:nth-child(2),
+    svg:nth-child(3),
+    svg:nth-child(4),
+    svg:nth-child(5) {
+        cursor: auto;
+    }
+
+    label[for] {
+        cursor: default;
+    }
+
+    div[data-bind='shape'] div:nth-child(1) {
+        clip-path: var(--shape-3);
+    }
+
+    div[data-bind='shape'] div:nth-child(2) {
+        clip-path: var(--shape-1);
+    }
+
+    div[data-bind='shape'] div:nth-child(3) {
+        clip-path: var(--shape-4);
+    }
 }
 
-/*cursor: https://www.youtube.com/watch?v=nMgB-GQzEdQ*/
-/*Images: https://www.freepik.com/*/
+@keyframes skewing-even {
+    0% {
+        transform: skew(10deg);
+    }
+    50% {
+        transform: skew(0deg);
+    }
+    100% {
+        transform: skew(-10deg);
+    }
+}
+
+@keyframes skewing-odd {
+    0% {
+        transform: skew(-10deg);
+    }
+    50% {
+        transform: skew(0deg);
+    }
+    100% {
+        transform: skew(10deg);
+    }
+}
+
+@keyframes blob {
+    0% {
+        border-radius: var(--border-radius--blob-1);
+    }
+
+    50% {
+        border-radius: var(--border-radius--blob-2);
+    }
+
+    100% {
+        border-radius: var(--border-radius--blob-1);
+    }
+}
+
+@keyframes sliding {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(10vw, 0);
+    }
+    75% {
+        transform: translate(-10vw, 0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes morph-1 {
+    0% {
+        clip-path: var(--shape-1);
+    }
+    20% {
+        clip-path: var(--shape-2);
+    }
+    40% {
+        clip-path: var(--shape-3);
+    }
+    60% {
+        clip-path: var(--shape-4);
+    }
+    80% {
+        clip-path: var(--shape-5);
+    }
+    100% {
+        clip-path: var(--shape-1);
+    }
+}
+
+@keyframes morph-4 {
+    0% {
+        clip-path: var(--shape-4);
+    }
+    20% {
+        clip-path: var(--shape-9);
+    }
+    40% {
+        clip-path: var(--shape-8);
+    }
+    60% {
+        clip-path: var(--shape-7);
+    }
+    80% {
+        clip-path: var(--shape-6);
+    }
+    100% {
+        clip-path: var(--shape-4);
+    }
+}
+
+@keyframes morph-9 {
+    0% {
+        clip-path: var(--shape-9);
+    }
+    20% {
+        clip-path: var(--shape-5);
+    }
+    40% {
+        clip-path: var(--shape-3);
+    }
+    60% {
+        clip-path: var(--shape-7);
+    }
+    80% {
+        clip-path: var(--shape-5);
+    }
+    100% {
+        clip-path: var(--shape-9);
+    }
+}
