@@ -1,4 +1,4 @@
-# CSS to the Rescue @cmda-minor-web 19-20
+# CSS to the Rescue
 
 ![Project](https://github.com/MarjoleinAardewijn/css-to-the-rescue-1920/blob/master/images/CSS-to-the-Rescue-Project.png "CSS to the Rescue project").
 
