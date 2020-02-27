@@ -78,4 +78,6 @@ For this assignment I have chosen the following two restrictions:
 
 ## Licence
 
+[MIT License](https://github.com/MarjoleinAardewijn/css-to-the-rescue-1920/blob/master/LICENSE.txt)
 
+Copyright (c) 2020 Marjolein Aardewijn
