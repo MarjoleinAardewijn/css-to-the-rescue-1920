@@ -1,6 +1,6 @@
 # CSS to the Rescue @cmda-minor-web 19-20
 
-![Project]( "CSS to the Rescue project").
+![Project](https://github.com/MarjoleinAardewijn/css-to-the-rescue-1920/blob/master/images/CSS-to-the-Rescue-Project.png "CSS to the Rescue project").
 
 ## Table of Content
 - [Description](#Description)
@@ -13,7 +13,11 @@
 
 ## Description
 
-In this three week course I create an innovative, experimental, yet pleasurable user experience for a responsive restaurant menu by using CSS and SVG.
+In this three week course I create an innovative, experimental, yet pleasurable user experience for a responsive restaurant menu by using CSS and SVG. 
+
+I had to realize this by using the Selector First Methodology.
+
+> "You _have_ to work with the so called *Selector First* CSS Methodology. This means that you _have to_ use a wide variety of   CSS selectors. ID’s are only allowed to trigger the `:target` selector. If you really need them, you are allowed to use a     few classes. In order to differentiate between."
 
 ## Demo
 
@@ -69,6 +73,8 @@ For this assignment I have chosen the following two restrictions:
 - [Checkbox hack](https://css-tricks.com/the-checkbox-hack/).
 - [background-clip](https://www.youtube.com/watch?v=9Kr3T4Ndl-o).
 - [Responsive Font Size](https://css-tricks.com/books/fundamental-css-tactics/scale-typography-screen-size/).
+- [[attribute]](https://css-tricks.com/almanac/selectors/a/attribute/).
+- [mix-blend-mode](https://css-tricks.com/almanac/properties/m/mix-blend-mode/).
 
 ## Licence
 
