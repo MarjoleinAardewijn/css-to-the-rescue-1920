@@ -14,15 +14,15 @@
     --border-radius--blob-1: 65% 45% 35% 75% / 65% 35% 75% 45%;
     --border-radius--blob-2: 35% 65% 75% 45% / 55% 65% 35% 65%;
 
-    --shape-1: polygon(93% 0, 100% 84%, 13% 100%, 0 11%);
-    --shape-2: polygon(100% 6%, 100% 91%, 6% 100%, 0 0);
-    --shape-3: polygon(100% 0, 94% 100%, 13% 100%, 0 11%);
-    --shape-4: polygon(100% 0, 100% 84%, 3% 100%, 0 15%);
-    --shape-5: polygon(100% 16%, 94% 100%, 3% 100%, 0 0);
-    --shape-6: polygon(100% 0, 89% 100%, 0 100%, 8% 4%);
-    --shape-7: polygon(100% 4%, 89% 100%, 4% 100%, 0 1%);
-    --shape-8: polygon(95% 0, 100% 88%, 0 100%, 4% 9%);
-    --shape-9: polygon(100% 8%, 96% 90%, 6% 100%, 0 0);
+    --morphing-square-1: polygon(93% 0, 100% 84%, 13% 100%, 0 11%);
+    --morphing-square-2: polygon(100% 6%, 100% 91%, 6% 100%, 0 0);
+    --morphing-square-3: polygon(100% 0, 94% 100%, 13% 100%, 0 11%);
+    --morphing-square-4: polygon(100% 0, 100% 84%, 3% 100%, 0 15%);
+    --morphing-square-5: polygon(100% 16%, 94% 100%, 3% 100%, 0 0);
+    --morphing-square-6: polygon(100% 0, 89% 100%, 0 100%, 8% 4%);
+    --morphing-square-7: polygon(100% 4%, 89% 100%, 4% 100%, 0 1%);
+    --morphing-square-8: polygon(95% 0, 100% 88%, 0 100%, 4% 9%);
+    --morphing-square-9: polygon(100% 8%, 96% 90%, 6% 100%, 0 0);
 }
 
 body {
@@ -152,12 +152,12 @@ blockquote {
     z-index: 1001;
 }
 
-div[data-bind='shape'] > div > p,
-div[data-bind='shape'] > div > cite {
+div[data-bind='morphing-square'] > div > p,
+div[data-bind='morphing-square'] > div > cite {
     mix-blend-mode: overlay;
 }
 
-div[data-bind='shape'] {
+div[data-bind='morphing-square'] {
     position: relative;
     display: flex;
     justify-content: center;
@@ -166,7 +166,7 @@ div[data-bind='shape'] {
     height: calc(125px + (275 - 125) * ((100vw - 300px) / (1600 - 300)));
 }
 
-div[data-bind='shape'] > * {
+div[data-bind='morphing-square'] > * {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -176,7 +176,7 @@ div[data-bind='shape'] > * {
     animation-timing-function: cubic-bezier(.17, .67, .83, .67);
 }
 
-div[data-bind='shape'] div:nth-child(1) {
+div[data-bind='morphing-square'] div:nth-child(1) {
     background: var(--light-opacity);
     filter: var(--drop-shadow);
     width: 98%;
@@ -184,7 +184,7 @@ div[data-bind='shape'] div:nth-child(1) {
     animation-name: morph-9;
 }
 
-div[data-bind='shape'] div:nth-child(2) {
+div[data-bind='morphing-square'] div:nth-child(2) {
     background: var(--blue-opacity);
     width: 87.5%;
     height: 87.5%;
@@ -192,7 +192,7 @@ div[data-bind='shape'] div:nth-child(2) {
     animation-name: morph-1;
 }
 
-div[data-bind='shape'] div:nth-child(3) {
+div[data-bind='morphing-square'] div:nth-child(3) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -422,7 +422,7 @@ svg:nth-child(5) {
     article:nth-child(odd),
     article:nth-child(even),
     svg:hover,
-    div[data-bind='shape'] div {
+    div[data-bind='morphing-square'] div {
         animation: none;
     }
 
@@ -446,16 +446,16 @@ svg:nth-child(5) {
         cursor: default;
     }
 
-    div[data-bind='shape'] div:nth-child(1) {
-        clip-path: var(--shape-3);
+    div[data-bind='morphing-square'] div:nth-child(1) {
+        clip-path: var(--morphing-square-3);
     }
 
-    div[data-bind='shape'] div:nth-child(2) {
-        clip-path: var(--shape-1);
+    div[data-bind='morphing-square'] div:nth-child(2) {
+        clip-path: var(--morphing-square-1);
     }
 
-    div[data-bind='shape'] div:nth-child(3) {
-        clip-path: var(--shape-4);
+    div[data-bind='morphing-square'] div:nth-child(3) {
+        clip-path: var(--morphing-square-4);
     }
 }
 
@@ -520,63 +520,63 @@ svg:nth-child(5) {
 
 @keyframes morph-1 {
     0% {
-        clip-path: var(--shape-1);
+        clip-path: var(--morphing-square-1);
     }
     20% {
-        clip-path: var(--shape-2);
+        clip-path: var(--morphing-square-2);
     }
     40% {
-        clip-path: var(--shape-3);
+        clip-path: var(--morphing-square-3);
     }
     60% {
-        clip-path: var(--shape-4);
+        clip-path: var(--morphing-square-4);
     }
     80% {
-        clip-path: var(--shape-5);
+        clip-path: var(--morphing-square-5);
     }
     100% {
-        clip-path: var(--shape-1);
+        clip-path: var(--morphing-square-1);
     }
 }
 
 @keyframes morph-4 {
     0% {
-        clip-path: var(--shape-4);
+        clip-path: var(--morphing-square-4);
     }
     20% {
-        clip-path: var(--shape-9);
+        clip-path: var(--morphing-square-9);
     }
     40% {
-        clip-path: var(--shape-8);
+        clip-path: var(--morphing-square-8);
     }
     60% {
-        clip-path: var(--shape-7);
+        clip-path: var(--morphing-square-7);
     }
     80% {
-        clip-path: var(--shape-6);
+        clip-path: var(--morphing-square-6);
     }
     100% {
-        clip-path: var(--shape-4);
+        clip-path: var(--morphing-square-4);
     }
 }
 
 @keyframes morph-9 {
     0% {
-        clip-path: var(--shape-9);
+        clip-path: var(--morphing-square-9);
     }
     20% {
-        clip-path: var(--shape-5);
+        clip-path: var(--morphing-square-5);
     }
     40% {
-        clip-path: var(--shape-3);
+        clip-path: var(--morphing-square-3);
     }
     60% {
-        clip-path: var(--shape-7);
+        clip-path: var(--morphing-square-7);
     }
     80% {
-        clip-path: var(--shape-5);
+        clip-path: var(--morphing-square-5);
     }
     100% {
-        clip-path: var(--shape-9);
+        clip-path: var(--morphing-square-9);
     }
 }
