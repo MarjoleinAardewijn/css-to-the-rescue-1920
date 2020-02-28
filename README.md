@@ -51,7 +51,7 @@ For this assignment I have chosen the following two restrictions:
 ## Sources
 
 - [CSS Tricks](https://css-tricks.com/).
-- [MDN](ttps://developer.mozilla.org/).
+- [MDN](https://developer.mozilla.org/).
 - [YouTube](http://www.youtube.com/).
 - [W3Schools](https://www.w3schools.com/).
 - [CodePen](https://codepen.io/).
